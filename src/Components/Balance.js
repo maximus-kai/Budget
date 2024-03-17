@@ -5,10 +5,18 @@ import Typography from '@mui/material/Typography';
 const Balance = () => {
   return (
     <Box sx={{ width: '100%', maxWidth: 500 }}>
-    <Typography variant="h1" gutterBottom>
+    <Typography
+    variant="h3" 
+    align="center"
+    color="text.primary"
+    gutterBottom>
     Your Balance
     </Typography>
-    <Typography variant="h3" gutterBottom>
+    <Typography 
+    variant="h3" 
+    align="center"
+    color="text.primary"
+    gutterBottom>
     ₦0.00
     </Typography>
   </Box>

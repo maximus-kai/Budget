@@ -5,28 +5,10 @@ import InputLabel from '@mui/material/InputLabel';
 import InputAdornment from '@mui/material/InputAdornment';
 import FormControl from '@mui/material/FormControl';
 import { TextField } from '@mui/material';
+import Typography from '@mui/material/Typography';
 
 
 export default function AddTransaction() {
-
-
-
-  // const AddTransaction = () => {
-//   return (
-//     <div>
-//        
-//         <h2>Description</h2>
-//         <input placeHolder='Description'>
-//         </input>
-//         <h2>Amount-(Negative = Expense, Positive = Income) </h2>
-//         <input placeHolder='Amount'>
-//         </input>
-//         <Button variant="contained">Add Transaction</Button>
-//     </div>
-//   )
-// }
-
-// export default AddTransaction
   return (
     <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
       <div>
@@ -36,7 +18,9 @@ export default function AddTransaction() {
           defaultValue="Transport"
           helperText="Negative = Expense, Positive = Income"
         />
-      <h2>Add New Transaction</h2>  
+      <Typography gutterBottom variant="h5" component="div">
+            Add New Transaction
+            </Typography> 
         <FormControl fullWidth sx={{ m: 1 }}>
           <InputLabel htmlFor="outlined-adornment-amount">Amount</InputLabel>
           <OutlinedInput

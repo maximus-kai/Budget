@@ -1,12 +1,20 @@
-import React from 'react'
+import React from 'react';
+import Typography from '@mui/material/Typography';
+
+
 
 const Heading = () => {
   return (
-    <div>
-        <h1>
-        Expense Tracker
-        </h1>
-    </div>
+       
+         <Typography 
+         gutterBottom 
+         variant="h2" 
+         align="center"
+         color="text.primary"
+         component="div">
+            Expense Tracker
+     </Typography>
+    
   )
 }
 
