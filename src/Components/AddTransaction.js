@@ -17,7 +17,7 @@ export default function AddTransaction() {
       variant="h5" 
       align="center"
       component="div">
-            Add New Transaction
+      Add New Transaction
       </Typography> 
       <TextField
           id="outlined-helperText"
