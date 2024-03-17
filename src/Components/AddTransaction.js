@@ -33,12 +33,12 @@ export default function AddTransaction() {
             startAdornment={<InputAdornment position="start">₦</InputAdornment>}
             label="Amount"
           />
-        </FormControl>
         <br/>
         <Button variant="contained" >Add Transaction
               <PriceChangeIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 ,ml:1}} />
               </Button>
-              <br/>
+        </FormControl>
+              
       </div>
     
   );
