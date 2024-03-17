@@ -7,21 +7,29 @@ import Typography from '@mui/material/Typography';
 export default function History() {
     return (
         <>
-     <Typography gutterBottom variant="h5" component="div">
+        <br/>
+     <Typography gutterBottom 
+     variant="h4" 
+     align="center"
+     component="div">
             History
      </Typography>
-      <Card variant="outlined" sx={{ maxWidth: 360 }}>
+      <Card variant="outlined" >
         <Box sx={{ p: 2 }}>
           <Stack direction="row" justifyContent="space-between" alignItems="center">
             <Typography gutterBottom variant="h5" component="div">
             Cash
             </Typography>
-            <Typography gutterBottom variant="h6" component="div">
+            <Typography gutterBottom
+            variant="h6" 
+            align="center"
+            color="#FF0000"
+            component="div">
             - ₦400.00
             </Typography>
           </Stack>
           <Typography color="text.secondary" variant="body2">
-            Short Description
+            Cassava, Garri, Ewa...uhhunn...
           </Typography>
         </Box>
       </Card>

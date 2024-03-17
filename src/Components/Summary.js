@@ -7,14 +7,17 @@ import Typography from '@mui/material/Typography';
 
 const Summary = () => {
   return (
-    <Card variant="outlined" sx={{ maxWidth: 360 }}>
+    <Card variant="outlined"   >
         <Box sx={{ p: 2 }}>
           <Stack direction="row" justifyContent="space-between" alignItems="center">
             <Typography gutterBottom variant="h5" component="div">
             INCOME
             </Typography>
-            <Typography gutterBottom variant="h6" component="div">
-            + ₦7.00
+            <Typography gutterBottom
+             variant="h6"
+             color="#00ff00"
+             component="div">
+            + ₦1500.00
             </Typography>
           </Stack>
          
@@ -22,8 +25,14 @@ const Summary = () => {
             <Typography gutterBottom variant="h5" component="div">
             EXPENSE
             </Typography>
-            <Typography gutterBottom variant="h6" component="div">
-            - ₦3.00 
+            <Typography gutterBottom 
+            variant="h6" 
+            component="div"
+            align="center"
+            color="#FF0000"
+            
+            >
+            - ₦13,200.00 
             </Typography>
           </Stack>
           

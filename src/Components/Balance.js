@@ -1,10 +1,10 @@
 import React from 'react';
-import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
 const Balance = () => {
   return (
-    <Box sx={{ width: '100%', maxWidth: 500 }}>
+    // <Box sx={{ width: '100%', maxWidth: 500 }}>
+    <>
     <Typography
     variant="h3" 
     align="center"
@@ -15,11 +15,12 @@ const Balance = () => {
     <Typography 
     variant="h3" 
     align="center"
-    color="text.primary"
+    color="#00ff00"
     gutterBottom>
-    ₦0.00
+    ₦10,000.00
     </Typography>
-  </Box>
+    </>
+//   </Box>
   )
 }
 

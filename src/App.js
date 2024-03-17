@@ -46,9 +46,7 @@ function App() {
             pb: 6,
           }}
         >
-          <Container maxWidth="sm">
-      
-            
+          <Container maxWidth="sm">   
             <Heading/>
             <Balance/>
             <Summary/>

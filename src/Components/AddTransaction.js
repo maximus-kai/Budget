@@ -1,27 +1,32 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import InputLabel from '@mui/material/InputLabel';
 import InputAdornment from '@mui/material/InputAdornment';
 import FormControl from '@mui/material/FormControl';
-import { TextField } from '@mui/material';
+import { Button, TextField } from '@mui/material';
 import Typography from '@mui/material/Typography';
+import PriceChangeIcon from '@mui/icons-material/PriceChange';
 
 
 export default function AddTransaction() {
   return (
-    <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
+   
       <div>
+        <br/>
       <TextField
           id="outlined-helperText"
           label="Description"
           defaultValue="Transport"
           helperText="Negative = Expense, Positive = Income"
         />
-      <Typography gutterBottom variant="h5" component="div">
+        <br/>
+      <Typography gutterBottom 
+      variant="h5" 
+      align="center"
+      component="div">
             Add New Transaction
-            </Typography> 
-        <FormControl fullWidth sx={{ m: 1 }}>
+      </Typography> 
+        <FormControl fullWidth >
           <InputLabel htmlFor="outlined-adornment-amount">Amount</InputLabel>
           <OutlinedInput
             id="outlined-adornment-amount"
@@ -29,8 +34,13 @@ export default function AddTransaction() {
             label="Amount"
           />
         </FormControl>
+        <br/>
+        <Button variant="contained" >Add Transaction
+              <PriceChangeIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 ,ml:1}} />
+              </Button>
+              <br/>
       </div>
-    </Box>
+    
   );
 }
 
