@@ -1,7 +1,10 @@
-import React from 'react'
+import React from 'react';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
 
 const Summary = () => {
   return (
+    
     <div>
         <h3> INCOME</h3>
         <h2>+ ₦7.00 </h2>
