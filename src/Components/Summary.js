@@ -3,6 +3,7 @@ import Card from '@mui/material/Card';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
+import { Divider } from '@mui/material';
 
 
 const Summary = () => {
@@ -18,6 +19,7 @@ const Summary = () => {
              color="#00ff00"
              component="div">
             + ₦1500.00
+            <Divider/>
             </Typography>
           </Stack>
          
@@ -30,9 +32,9 @@ const Summary = () => {
             component="div"
             align="center"
             color="#FF0000"
-            
             >
             - ₦13,200.00 
+            <Divider/>
             </Typography>
           </Stack>
           

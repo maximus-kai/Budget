@@ -13,6 +13,12 @@ export default function AddTransaction() {
    
       <div>
         <br/>
+      <Typography gutterBottom 
+      variant="h5" 
+      align="center"
+      component="div">
+            Add New Transaction
+      </Typography> 
       <TextField
           id="outlined-helperText"
           label="Description"
@@ -20,12 +26,6 @@ export default function AddTransaction() {
           helperText="Negative = Expense, Positive = Income"
         />
         <br/>
-      <Typography gutterBottom 
-      variant="h5" 
-      align="center"
-      component="div">
-            Add New Transaction
-      </Typography> 
         <FormControl fullWidth >
           <InputLabel htmlFor="outlined-adornment-amount">Amount</InputLabel>
           <OutlinedInput

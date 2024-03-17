@@ -3,6 +3,7 @@ import Card from '@mui/material/Card';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
+import { Divider } from '@mui/material';
 
 export default function History() {
     return (
@@ -26,6 +27,7 @@ export default function History() {
             color="#FF0000"
             component="div">
             - ₦400.00
+            <Divider/>
             </Typography>
           </Stack>
           <Typography color="text.secondary" variant="body2">
