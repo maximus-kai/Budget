@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useState } from 'react';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import InputLabel from '@mui/material/InputLabel';
 import InputAdornment from '@mui/material/InputAdornment';
@@ -9,6 +10,8 @@ import PriceChangeIcon from '@mui/icons-material/PriceChange';
 
 
 export default function AddTransaction() {
+    const [text,setText] = useState('');
+    const [amount,setAmount] = useState(0);
   return (
    
       <div>
@@ -22,6 +25,8 @@ export default function AddTransaction() {
       <TextField
           id="outlined-helperText"
           label="Description"
+          value={text}
+          onChange={(e)=>{setText(e.target.value);console.log(e.target.value)}}
           defaultValue="Transport"
           helperText="Negative = Expense, Positive = Income"
         />
@@ -30,7 +35,10 @@ export default function AddTransaction() {
           <InputLabel htmlFor="outlined-adornment-amount">Amount</InputLabel>
           <OutlinedInput
             id="outlined-adornment-amount"
-            startAdornment={<InputAdornment position="start">₦</InputAdornment>}
+            startAdornment={<InputAdornment 
+            value={amount}
+            onChange={(e)=>setAmount(e.target.value)}
+            position="start">₦</InputAdornment>}
             label="Amount"
           />
         <br/>

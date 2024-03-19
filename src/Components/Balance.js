@@ -1,6 +1,6 @@
 import React from 'react';
 import Typography from '@mui/material/Typography';
-import { Box, Divider, Stack } from '@mui/material';
+import { Box, Stack } from '@mui/material';
 
 
 const Balance = () => {
