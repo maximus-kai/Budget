@@ -1,9 +1,17 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import Typography from '@mui/material/Typography';
 import { Box, Stack } from '@mui/material';
+import { GlobalContext } from '../context/GlobalState';
 
 
 const Balance = () => {
+  const {transactions} = useContext(GlobalContext);
+
+  const Amount = transactions.map((eachTransaction)=> eachTransaction.something);
+  const Total = Amount.reduce((acc,item)=>(acc += item),0).toFixed(2)
+console.log(Amount,Total)
+
+
   return (
     <Box >
 
@@ -25,7 +33,7 @@ const Balance = () => {
             align="center"
             color="black"
             gutterBottom>
-            ₦10,000.00
+            ₦{Total}
             </Typography>
     </Stack>
   </Box>
