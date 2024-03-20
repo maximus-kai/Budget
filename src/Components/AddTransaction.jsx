@@ -29,7 +29,7 @@ export default function AddTransaction() {
           value={text}
           onChange={(e)=>{setText(e.target.value);console.log(e.target.value)}}
           defaultValue="Transport"
-          helperText="Negative = Expense, Positive = Income"
+          helperText="Negative: Nah Billin', Positive: Nah Income"
         />
         <br/>
         <FormControl fullWidth >

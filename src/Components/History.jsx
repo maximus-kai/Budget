@@ -5,6 +5,13 @@ import Typography from '@mui/material/Typography';
 import AddTransaction from './AddTransaction';
 
 const History = ({Transaction}) => {
+  let sign;
+  if (Transaction.something <0){
+     sign = "-";
+  }
+    else{
+     sign = "+";
+  }
   return (
     <Stack direction="row" justifyContent="space-between" alignItems="center">
             <Typography gutterBottom variant="h5" component="div">
@@ -15,7 +22,7 @@ const History = ({Transaction}) => {
             align="center"
             color="#FF0000"
             component="div">
-            ₦{Transaction.something}
+            {sign}₦{Math.abs(Transaction.something)}
             <Divider/>
             </Typography>
           </Stack>
