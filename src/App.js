@@ -10,6 +10,7 @@ import Nav  from './Components/Nav';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { Typography } from '@mui/material';
+import { GlobalProvider } from './context/GlobalState';
 const theme = createTheme(
   {
     palette: {
@@ -31,6 +32,8 @@ const theme = createTheme(
 
 function App() {
   return (
+    <GlobalProvider>
+
     <div className="App">
       <ThemeProvider theme={theme}>
         <Typography gutterBottom variant="h5" component="div">
@@ -45,7 +48,7 @@ function App() {
             pt: 8,
             pb: 6,
           }}
-        >
+          >
           <Container maxWidth="sm">   
             <Heading/>
             <Balance/>
@@ -57,6 +60,7 @@ function App() {
       </main>
       </ThemeProvider>
     </div>
+          </GlobalProvider>
   );
 }
 
