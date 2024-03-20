@@ -5,10 +5,10 @@ import AppReducer from './AppReducer';
 // Initial State
 const initialState = {
    transactions: [
-        {id:1,name:"min",something: -20},
-        {id:2,name:"tin",something: 300},
-        {id:3,name:"box",something: -10},
-        {id:4,name:"box",something: -70},
+        {id:1,description:"min",something: -20},
+        {id:2,description:"tin",something: 300},
+        {id:3,description:"box",something: -10},
+        {id:4,description:"bloxx",something: -70},
     ]
 }
 // Create Context

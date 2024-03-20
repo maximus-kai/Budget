@@ -10,8 +10,6 @@ import PriceChangeIcon from '@mui/icons-material/PriceChange';
 import { GlobalContext } from '../context/GlobalState';
 
 export default function AddTransaction() {
-  const {transactions} = useContext(GlobalContext);
-  console.log("context:",transactions);
 
     const [text,setText] = useState('');
     const [amount,setAmount] = useState(0);

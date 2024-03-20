@@ -1,10 +1,9 @@
-// import './App.css';
 import Container from '@mui/material/Container';
 import AddTransaction from './Components/AddTransaction';
 import Balance from './Components/Balance';
 import Heading from './Components/Heading';
 import Box from '@mui/material/Box';
-import History from './Components/History';
+import History from './Components/HistoryList';
 import Summary from './Components/Summary';
 import Nav  from './Components/Nav';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
