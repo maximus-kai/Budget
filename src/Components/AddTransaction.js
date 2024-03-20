@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useState } from 'react';
+import { useState,useContext } from 'react';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import InputLabel from '@mui/material/InputLabel';
 import InputAdornment from '@mui/material/InputAdornment';
@@ -7,9 +7,12 @@ import FormControl from '@mui/material/FormControl';
 import { Button, TextField } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import PriceChangeIcon from '@mui/icons-material/PriceChange';
-
+import { GlobalContext } from '../context/GlobalState';
 
 export default function AddTransaction() {
+  const context = useContext(GlobalContext);
+  console.log("context:",context);
+
     const [text,setText] = useState('');
     const [amount,setAmount] = useState(0);
   return (

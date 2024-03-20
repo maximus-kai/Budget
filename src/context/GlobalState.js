@@ -1,10 +1,12 @@
 import React,{createContext,useReducer} from 'react';
-import AppReducer from './AppReducer'
+import AppReducer from './AppReducer';
+
+
 // Initial State
 const initialState = {
    transactions: [
-        {id:1,name:"max",something: -20},
-        {id:2,name:"tan",something: 300},
+        {id:1,name:"min",something: -20},
+        {id:2,name:"tin",something: 300},
         {id:3,name:"box",something: -10},
         {id:4,name:"box",something: -70},
     ]
