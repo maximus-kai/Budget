@@ -18,7 +18,7 @@ export default function HistoryList() {
             History
      </Typography>
       <Card variant="outlined" >
-        <Box sx={{ p: 2 }}>
+        <Box sx={{ p: 2 , m:5 }}>
           {
             transactions.map((eachTransaction)=>
             (<History key = {eachTransaction.id} Transaction = {eachTransaction} />)

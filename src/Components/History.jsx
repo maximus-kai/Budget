@@ -1,10 +1,12 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import Stack from '@mui/material/Stack';
 import { Divider } from '@mui/material';
 import Typography from '@mui/material/Typography';
-import AddTransaction from './AddTransaction';
+import { GlobalContext } from '../context/GlobalState';
+
 
 const History = ({Transaction}) => {
+  const {deleteTransaction} = useContext(GlobalContext);
   let sign; 
   let TheColor; 
   if (Transaction.something <0){
@@ -15,8 +17,12 @@ const History = ({Transaction}) => {
      sign = "+";
      TheColor = "#00ff00";
   }
-  return (
-    <Stack direction="row" justifyContent="space-between" alignItems="center">
+  return (<>
+  <Stack direction="row" justifyContent="space-between" alignItems="center">
+            <Typography gutterBottom variant="h5" onClick={()=>deleteTransaction(Transaction.id)} component="div" color="#FF0000">
+            X
+            </Typography>
+        <Stack direction="row" justifyContent="space-between" alignItems="center">
             <Typography gutterBottom variant="h5" component="div">
             {Transaction.description}
             </Typography>
@@ -30,7 +36,10 @@ const History = ({Transaction}) => {
             <Divider/>
             </Typography>
           </Stack>
-    // <h1> {props.Transaction}</h1>
+  </Stack>
+          
+          </>
+  
     
   )
 }

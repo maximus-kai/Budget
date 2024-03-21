@@ -1,7 +1,10 @@
-/* .App {
-  text-align: center;
-} */
 
+.MuiTypography-h5 {
+  cursor: pointer;
+}
+#MuiTypography-h5 {
+  cursor: pointer;
+}
 
 
 

@@ -1,12 +1,21 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import Card from '@mui/material/Card';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import { Divider } from '@mui/material';
+import { GlobalContext } from '../context/GlobalState';
+
 
 
 const Summary = () => {
+
+  const {transactions} = useContext(GlobalContext)
+  
+  const Amount = transactions.map((eachTransaction)=> eachTransaction.something);
+  const Income = Amount.filter(eachItem=>eachItem>0).reduce((acc,item)=>(acc += item),0).toFixed(2)
+  const Expense = (Amount.filter(eachItem=>eachItem<0).reduce((acc,item)=>(acc += item),0)*1).toFixed(2)
+  
   return (
     <Card variant="outlined"   >
         <Box sx={{ p: 2 }}>
@@ -18,7 +27,7 @@ const Summary = () => {
              variant="h6"
              color="#00ff00"
              component="div">
-            + ₦1500.00
+            +₦{Income}
             <Divider/>
             </Typography>
           </Stack>
@@ -33,7 +42,7 @@ const Summary = () => {
             align="center"
             color="#FF0000"
             >
-            - ₦13,200.00 
+            -₦{Math.abs(Expense)} 
             <Divider/>
             </Typography>
           </Stack>
