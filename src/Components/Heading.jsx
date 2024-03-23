@@ -10,7 +10,7 @@ const Heading = () => {
          align="center"
          color="text.primary"
          component="div">
-            ----------
+            Sapa-Tracker.
      </Typography>
     
   )
