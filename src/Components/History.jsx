@@ -42,12 +42,8 @@ const History = ({Transaction}) => {
             </Typography>
           </Stack>
   </Stack>
-          
           </>
-  
-    
   )
 }
 
 export default History;
-// console.log("from history",props.Transaction)

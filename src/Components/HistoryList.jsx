@@ -7,7 +7,6 @@ import History from './History';
 
 export default function HistoryList() {
   const {transactions} = useContext(GlobalContext);
-  console.log(`transactions from historylist`, {transactions})
     return (
         <>
         <br/>

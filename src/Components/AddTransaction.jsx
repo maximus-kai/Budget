@@ -39,7 +39,7 @@ export default function AddTransaction() {
           label="Description"
           value = {text}
           defaultValue="Transport"
-          onChange={(e)=> {setText(e.target.value);console.log(e.target.value)}}
+          onChange={(e)=> {setText(e.target.value)}}
           helperText="Negative: Nah Billin', Positive: Nah Income"
         />
         <br/>
@@ -49,7 +49,7 @@ export default function AddTransaction() {
           <OutlinedInput
             id="outlined-adornment-amount"
             value = {amount}
-            onChange={(e)=> {setAmount(e.target.value);console.log(e.target.value) }}
+            onChange={(e)=> {setAmount(e.target.value) }}
             startAdornment={<InputAdornment 
             position="start">₦</InputAdornment>}
             label="Amount"

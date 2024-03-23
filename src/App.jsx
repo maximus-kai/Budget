@@ -1,6 +1,7 @@
 import Container from '@mui/material/Container';
 import AddTransaction from './Components/AddTransaction';
 import Balance from './Components/Balance';
+import "./App.css"
 import Heading from './Components/Heading';
 import Box from '@mui/material/Box';
 import History from './Components/HistoryList';

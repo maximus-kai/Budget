@@ -9,7 +9,6 @@ const Balance = () => {
 
   const Amount = transactions.map((eachTransaction)=> eachTransaction.something);
   const Total = Amount.reduce((acc,item)=>(acc += item),0).toFixed(2)
-console.log(Amount,Total)
 
 
   return (
