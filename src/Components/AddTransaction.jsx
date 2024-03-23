@@ -10,9 +10,20 @@ import PriceChangeIcon from '@mui/icons-material/PriceChange';
 import { GlobalContext } from '../context/GlobalState';
 
 export default function AddTransaction() {
-
+    const {addTransaction} = useContext(GlobalContext);
     const [text,setText] = useState('');
     const [amount,setAmount] = useState(0);
+
+    const Submit =(e)=>{
+      e.preventDefault();
+      const transactionParce = {
+        id: Math.floor(Math.random()*10000000) ,
+        description: text,
+        something: +amount
+      }
+      addTransaction(transactionParce)
+    }
+
   return (
    
       <div>
@@ -26,24 +37,28 @@ export default function AddTransaction() {
       <TextField
           id="outlined-helperText"
           label="Description"
-          value={text}
-          onChange={(e)=>{setText(e.target.value);console.log(e.target.value)}}
+          value = {text}
           defaultValue="Transport"
+          onChange={(e)=> {setText(e.target.value);console.log(e.target.value)}}
           helperText="Negative: Nah Billin', Positive: Nah Income"
         />
         <br/>
-        <FormControl fullWidth >
+        <FormControl 
+        fullWidth >
           <InputLabel htmlFor="outlined-adornment-amount">Amount</InputLabel>
           <OutlinedInput
             id="outlined-adornment-amount"
+            value = {amount}
+            onChange={(e)=> {setAmount(e.target.value);console.log(e.target.value) }}
             startAdornment={<InputAdornment 
-            value={amount}
-            onChange={(e)=>setAmount(e.target.value)}
             position="start">₦</InputAdornment>}
             label="Amount"
           />
         <br/>
-        <Button variant="contained" >Add Transaction
+        <Button 
+        onClick={Submit}
+        variant="contained" 
+        >Add Transaction
               <PriceChangeIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 ,ml:1}} />
               </Button>
         </FormControl>

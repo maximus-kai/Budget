@@ -1,5 +1,7 @@
 import React,{useContext} from 'react';
 import Stack from '@mui/material/Stack';
+import { Button } from '@mui/material';
+import PriceChangeIcon from '@mui/icons-material/PriceChange';
 import { Divider } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import { GlobalContext } from '../context/GlobalState';
@@ -19,9 +21,12 @@ const History = ({Transaction}) => {
   }
   return (<>
   <Stack direction="row" justifyContent="space-between" alignItems="center">
-            <Typography gutterBottom variant="h5" onClick={()=>deleteTransaction(Transaction.id)} component="div" color="#FF0000">
-            X
-            </Typography>
+            
+            <Button 
+        variant="contained" 
+        onClick={()=>deleteTransaction(Transaction.id)}
+        >X
+              </Button>
         <Stack direction="row" justifyContent="space-between" alignItems="center">
             <Typography gutterBottom variant="h5" component="div">
             {Transaction.description}
